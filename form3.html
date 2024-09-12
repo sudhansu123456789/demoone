@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Readonly ,disabled , tabindex</title>
+    </head>
+    <body>
+        <form action="savemessage.py" method="POST" enctype="multipart/form-data">
+          <table align="center" cellpadding="15">
+              <caption>
+                 <h1>Contact Us</h1>
+                 <font color="red">* marked field are mandatory </font>
+              </caption> 
+                   
+              <tr>
+                 <th>Application no</th>
+                 <td colspan="3"> <input type="text" value="9999" readonly="readonly" name="appno"/></td>
+              </tr>
+
+              <tr>
+                 <th>Your full name <font color="red"> *</font></th>
+                 <td><input type="text" tabindex="1" required="required" name="fname" /></td>
+                 <th>Your Mobile No <font color="red">* </font></th>
+                 <td> <input type="number" tabindex="2" required="required" name="mobile"/></td>
+              </tr>
+
+              <tr>
+                <th> e-Mail Id <font color="red"> *</font></th>
+                <td> <input type="email" tabindex="3" required="required" name="email"/></td>
+                <th>City Name</th>
+                <td>
+                      <select name="city" disabled="disabled">
+                          <option> Choose </option>
+                          <option selected> Bangalore </option>
+                          <option> Mumbai </option>
+                      </select>
+                 </td>
+              </tr>
+
+              <tr>
+                <th> Your Message <font color="red">* </font></th>
+                <td colspan="3"> <textarea rows="5" cols="70" tabindex="4" required="required" name="Message"></textarea></td>
+              </tr>
+
+              <tr>
+                   <th colspan="4">
+                      <button type="submit"> Send Message</button>
+                      <button type="reset"> Reset </button>
+                  </th>
+              </tr>
+           </table>
+        </form>
+    </body>
+</html>
+
